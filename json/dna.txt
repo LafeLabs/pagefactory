@@ -2,6 +2,7 @@
 	{
 		"path":"factory_symbols",
 		"files":[
+			"copy.svg",
 			"editor.svg",
 			"factory.svg",
 			"page.svg"
@@ -16,6 +17,7 @@
 	{
 		"path":"php",
 		"files":[
+			"copy.txt",
 			"dnagenerator.txt",
 			"editor.txt",
 			"fileloader.txt",

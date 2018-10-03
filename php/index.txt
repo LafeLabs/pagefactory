@@ -43,6 +43,9 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 <a id = "editlink" href = "editor.php">
     <img src = "factory_symbols/editor.svg" style = "width:80px"/>
 </a>
+<a id = "copylink" href = "copy.php">
+    <img src = "factory_symbols/copy.svg" style = "height:80px"/>
+</a>
 <h1>Page Factory</h1>
         <p>Enter name of new page:
         <input id = "pageinput"/></p>
@@ -91,6 +94,11 @@ h1,h2,h3,h4,h5{
     position:absolute;
     top:0px;
     left:0px;
+}
+#copylink{
+    position:absolute;
+    right:0px;
+    top:0px;
 }
 input{
     width:10em;

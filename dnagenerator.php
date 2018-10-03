@@ -7,7 +7,7 @@ function getfiles($localpath){
     
     foreach($files as $value){
         if($value != "." && $value != ".."){
-            if(substr($value,-4) == ".txt"){
+            if(substr($value,-4) == ".txt" || substr($value,-4) == ".svg"){
                 $outstring .= "\t\t\t\"".$value."\",\n";
             }
         }
@@ -20,7 +20,14 @@ function getfiles($localpath){
 
 $finalstring = "[\n";
 
+$finalstring .= getfiles("factory_symbols");
+$finalstring .= ",\n";
+
+$finalstring .= getfiles("json");
+$finalstring .= ",\n";
+
 $finalstring .= getfiles("php");
+
 
 $finalstring .= "\n]";
 

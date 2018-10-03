@@ -37,16 +37,14 @@ EGO DEATH:
 <title>Page Editor</title>
 </head>
 <body  class="no-mathjax">
-<table id = "linktable">
-    <tr>
-        <td>
-            <a href = "index.php">index.php</a>
-        </td>
-        <td>
-            <a href = "../">../</a>
-        </td>
-    </tr>
-</table>
+    
+<a href = "index.php" id = "indexlink">
+    <img style = "width:80px" src = "../factory_symbols/page.svg"/>    
+</a>
+<a href = "../" id = "uplink">
+    <img src = "../factory_symbols/factory.svg" style = "width:80px"/>    
+</a>
+
 <div id="maineditor" contenteditable="true" spellcheck="false"></div>
 <div id = "scroll" class = "mathjax">
 </div>
@@ -84,7 +82,6 @@ httpc.onreadystatechange = function() {
 httpc.open("GET", "fileloader.php?filename=" + currentFile, true);
 httpc.send();
 
-
 </script>
 <style>
 body{
@@ -93,7 +90,7 @@ body{
 }
 #maineditor{
     position:absolute;
-    top:2em;
+    top:100px;
     bottom:50%;
     right:5px;
     left:5px;
@@ -114,34 +111,19 @@ body{
     width:100%;
     text-align:center;
 }
-#linktable{
+#indexlink{
     position:absolute;
     top:0px;
     left:0px;
-    font-size:22px;
-}
-#linktable a{
-    color:white;
-}
-#linktable td{
-    padding-left:2em;
-}
-.button{
-    cursor:pointer;
-    text-align:center;
     background-color:white;
-    border-radius:0.5em;
-    padding-left:2em;
-    padding-right:2em;
-    color:black;
-    z-index:2;
 }
-.button:hover{
-    background-color:green;
+#uplink{
+    position:absolute;
+    right:0px;
+    top:0px;
+    background-color:white;
 }
-.button:active{
-    background-color:yellow;
-}
+
 
 </style>
 

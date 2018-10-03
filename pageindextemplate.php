@@ -39,18 +39,12 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 </head>
 <body>
-<table id = "linktable">
-    <tr>
-        <td>
-            <a href = "../">PAGE FACTORY</a>
-        </td>
-        <td>
-        </td>
-        <td>
-            <a href = "pageeditor.php">PAGE EDITOR</a>
-        </td>
-    </tr>
-</table>
+    <a id = "uplink" href = "../">
+        <img src = "../factory_symbols/factory.svg" style = "width:80px"/>
+    </a>
+    <a id = "editlink" href = "pageeditor.php">
+        <img src = "../factory_symbols/editor.svg" style = "width:80px"/>
+    </a>
 <div id = "scroll">
 <?php
 echo file_get_contents("html/page.txt");
@@ -78,10 +72,15 @@ h1,h2,h3,h4,h5{
     width:100%;
     text-align:center;
 }
-#linktable{
+#editlink{
     position:absolute;
     top:0px;
     left:0px;
+}
+#uplink{
+    position:absolute;
+    right:0px;
+    top:0px;
 }
 input{
     width:10em;

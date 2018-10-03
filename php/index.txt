@@ -39,24 +39,20 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 </head>
 <body>
-<table id = "linktable">
-    <tr>
-        <td>
-            <a href = "editor.php">EDITOR</a>
-        </td>
-    </tr>
-    <tr>
-        <td>Enter name of new page:</td>
-        <td><input id = "pageinput"/></td>
-    </tr>
-</table>
+
+<a id = "editlink" href = "editor.php">
+    <img src = "factory_symbols/editor.svg" style = "width:80px"/>
+</a>
 <h1>Page Factory</h1>
+        <p>Enter name of new page:
+        <input id = "pageinput"/></p>
+        
 <ul id = "filelist">
 <?php
 
 $files = scandir(getcwd());
 foreach($files as $value){
-    if($value != "." && $value != ".." && is_dir($value) && $value != "json" &&  $value != "php" && $value != ".git"){
+    if($value != "." && $value != ".." && is_dir($value) && $value != "json" &&  $value != "php" && $value != ".git" && $value != "factory_symbols"){
         echo "<li><a href = \"".$value."/\">".$value."/</a></li>\n";
     }
 }
@@ -91,7 +87,7 @@ h1,h2,h3,h4,h5{
     width:100%;
     text-align:center;
 }
-#linktable{
+#editlink{
     position:absolute;
     top:0px;
     left:0px;
